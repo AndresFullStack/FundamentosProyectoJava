@@ -1,0 +1,10 @@
+CC;1000000001;Camila;Hant
+CC;1000000002;Sebastian;Hant
+CC;1000000003;Miguel;Castroz
+CC;1000000004;Camila;Castroz
+CC;1000000005;Juan;Trivi
+CC;1000000006;Andres;Rojas
+CC;1000000007;Juan;Castro
+CC;1000000008;Daniel;Trivi
+CC;1000000009;Andres;Trivi
+CC;1000000010;Laura;Gonzalez
