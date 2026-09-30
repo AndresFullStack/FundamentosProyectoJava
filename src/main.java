@@ -88,7 +88,7 @@ public class main {
     }
 
     /**
-     * Read the products file
+     * Read the products file and returns a list of products
      */
     private static ArrayList<Product> loadProducts()
             throws IOException {
@@ -141,7 +141,7 @@ public class main {
     }
 
     /**
-     * Read the salesman file
+     * Read the salesman file and returns a list of salesman
      */
     private static ArrayList<Salesman> loadSalesmen()
             throws IOException {
@@ -196,38 +196,31 @@ public class main {
     }
 
     /**
-     * Obtiene todos los archivos de ventas de la carpeta.
-     *
-     * @return archivos de ventas encontrados
+     * Get every file of sales of the sales folder, and returns the sales into the folder
      */
     private static File[] loadSalesFiles() {
 
-        File folder =
+        File folderSales =
             new File(SALES_FOLDER);
 
-        if (!folder.exists()
-                || !folder.isDirectory()) {
+        if (!folderSales.exists()
+                || !folderSales.isDirectory()) {
 
             return new File[0];
         }
 
-        File[] files =
-            folder.listFiles();
+        File[] salesByUser =
+        	folderSales.listFiles();
 
-        if (files == null) {
+        if (salesByUser == null) {
             return new File[0];
         }
 
-        return files;
+        return salesByUser;
     }
 
     /**
-     * Procesa todos los archivos de ventas.
-     *
-     * @param salesFiles archivos de ventas
-     * @param salesmen lista de vendedores
-     * @param products lista de productos
-     * @throws IOException si ocurre un error
+     * Process every file of sales
      */
     private static void processSales(
             File[] salesFiles,
@@ -235,6 +228,7 @@ public class main {
             ArrayList<Product> products)
             throws IOException {
 
+    	// Start the cycle of sales and process the sales 	
         for (File file : salesFiles) {
 
             if (!file.isFile()) {
@@ -250,12 +244,7 @@ public class main {
     }
 
     /**
-     * Procesa un archivo de ventas.
-     *
-     * @param file archivo de ventas
-     * @param salesmen lista de vendedores
-     * @param products lista de productos
-     * @throws IOException si ocurre un error
+     * Process every file of the Array of Files from the salesFiles
      */
     private static void processSalesFile(
             File file,
@@ -276,9 +265,11 @@ public class main {
             return;
         }
 
+        // Remember that the first line of every file of sales is the documentType and documentNumber         
         String[] salesmanData =
             line.split(";");
 
+        // The salesmanData[0] is documentType
         long salesmanId =
             Long.parseLong(
                 salesmanData[1]
@@ -289,7 +280,11 @@ public class main {
                 salesmanId,
                 salesmen
             );
-
+        
+        // If the salesman doesn't exist the function closes and continue with the next file of sales
+        // and when it find the salesman start to reading each sale of the file from the salesman and 
+        // start finding the products and when find each product start to adding the value of sales, and
+        // reaching the total, after that starts to adding to the product a quantity of sold of the products
         if (salesman == null) {
             reader.close();
             return;
@@ -320,6 +315,8 @@ public class main {
                     products
                 );
 
+            // Here each object salesman and product add the attributes of sales and quantity, with that
+            // can generated a report of each one and total
             if (product != null) {
 
                 double saleValue =
@@ -340,11 +337,7 @@ public class main {
     }
 
     /**
-     * Busca un vendedor por número de documento.
-     *
-     * @param documentNumber número de documento
-     * @param salesmen lista de vendedores
-     * @return vendedor encontrado o null
+     * Search the salesman for the documentNumber
      */
     private static Salesman findSalesman(
             long documentNumber,
@@ -363,11 +356,7 @@ public class main {
     }
 
     /**
-     * Busca un producto por su identificador.
-     *
-     * @param productId identificador del producto
-     * @param products lista de productos
-     * @return producto encontrado o null
+     * Find the product by an id
      */
     private static Product findProduct(
             int productId,
@@ -384,13 +373,7 @@ public class main {
     }
 
     /**
-     * Genera el reporte de vendedores.
-     *
-     * El reporte se ordena de mayor a menor
-     * cantidad de dinero recaudado.
-     *
-     * @param salesmen lista de vendedores
-     * @throws IOException si ocurre un error
+     * Creates a reports of the salesman
      */
     private static void generateSalesmanReport(
             ArrayList<Salesman> salesmen)
@@ -433,13 +416,7 @@ public class main {
     }
 
     /**
-     * Genera el reporte de productos.
-     *
-     * Los productos se ordenan de mayor a menor
-     * cantidad de unidades vendidas.
-     *
-     * @param products lista de productos
-     * @throws IOException si ocurre un error
+     * Creates a report of the products
      */
     private static void generateProductReport(
             ArrayList<Product> products)
