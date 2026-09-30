@@ -20,45 +20,35 @@ public class Product {
     }
 
     /**
-     * Obtiene el identificador del producto.
-     *
-     * @return identificador del producto
+     * Get the id of the product
      */
     public int getId() {
         return id;
     }
 
     /**
-     * Obtiene el nombre del producto.
-     *
-     * @return nombre del producto
+     * Get the name of the product
      */
     public String getName() {
         return name;
     }
 
     /**
-     * Obtiene el precio del producto.
-     *
-     * @return precio por unidad
+     * Get the price of the product
      */
     public double getPrice() {
         return price;
     }
 
     /**
-     * Obtiene la cantidad de unidades vendidas.
-     *
-     * @return cantidad vendida
+     * Get the quantity sold of the product
      */
     public int getQuantitySold() {
         return quantitySold;
     }
 
     /**
-     * Aumenta la cantidad de unidades vendidas.
-     *
-     * @param quantity cantidad vendida
+     * Add the quantity sold of the product
      */
     public void addQuantitySold(int quantity) {
         quantitySold += quantity;

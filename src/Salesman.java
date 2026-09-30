@@ -1,6 +1,6 @@
 
 /**
- * Representa a un vendedor del sistema.
+ * Represents a salesman
  */
 public class Salesman {
 
@@ -11,12 +11,7 @@ public class Salesman {
     private double totalSales;
 
     /**
-     * Construye un vendedor.
-     *
-     * @param documentType tipo de documento
-     * @param documentNumber número de documento
-     * @param name nombres del vendedor
-     * @param lastName apellidos del vendedor
+     * Salesman constructor object 
      */
     public Salesman(
             String documentType,
@@ -32,63 +27,49 @@ public class Salesman {
     }
 
     /**
-     * Obtiene el tipo de documento.
-     *
-     * @return tipo de documento
+     * Get the type document
      */
     public String getDocumentType() {
         return documentType;
     }
 
     /**
-     * Obtiene el número de documento.
-     *
-     * @return número de documento
+     * Get the document number
      */
     public long getDocumentNumber() {
         return documentNumber;
     }
 
     /**
-     * Obtiene los nombres del vendedor.
-     *
-     * @return nombres del vendedor
+     * Get the name of the salesman
      */
     public String getName() {
         return name;
     }
 
     /**
-     * Obtiene los apellidos del vendedor.
-     *
-     * @return apellidos del vendedor
+     * Get the lastnames of the salesman
      */
     public String getLastName() {
         return lastName;
     }
 
     /**
-     * Obtiene el nombre completo del vendedor.
-     *
-     * @return nombre completo
+     * Get the fullname of the salesman
      */
     public String getFullName() {
         return name + " " + lastName;
     }
 
     /**
-     * Obtiene el total recaudado por el vendedor.
-     *
-     * @return total de ventas
+     * Get the total of sales
      */
     public double getTotalSales() {
         return totalSales;
     }
 
     /**
-     * Agrega una cantidad al total de ventas.
-     *
-     * @param amount cantidad de dinero
+     * Add the sales for the products of salesman
      */
     public void addSale(double amount) {
         totalSales += amount;
