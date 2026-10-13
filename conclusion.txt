@@ -1,0 +1,26 @@
+CONCLUSIONES DEL PROYECTO JAVA
+
+1. Lo aprendido durante el desarrollo del proyecto
+
+Durante el desarrollo de este proyecto aprendí a aplicar los conocimientos de programación en Java para 
+construir una solución que permite generar, leer, procesar y organizar información almacenada en archivos de texto. 
+También comprendi como funcionaba el codigo orientado a objetos, esto me permitio comprender como se realizaban los temas
+de herencia y creacion con base en constructores de objetos.
+Tambien comprendí la importancia de organizar el código, documentar los métodos y separar las responsabilidades 
+para facilitar su comprensión y mantenimiento.
+
+2. Posibles aplicaciones en la vida profesional
+
+Los conocimientos adquiridos pueden aplicarse en el desarrollo de sistemas empresariales que necesiten procesar
+grandes cantidades de información, generar reportes y automatizacion de tareas. Estas destrezas son útiles 
+para crear aplicaciones que administren ventas, inventarios, clientes y productos, así como para desarrollar 
+soluciones que lean información desde archivos y produzcan resultados organizados.
+También puedo aplicar las buenas prácticas de programación en futuros proyectos profesionales.
+
+3. Dificultades presentadas durante el desarrollo del proyecto
+
+Durante el desarrollo del proyecto, algunas de las dificultades fueron comprender y mantener el formato requerido
+para los archivos de entrada, comprender el funcionamiento de la lectura de archivos, relacionar correctamente 
+los vendedores con sus ventas y los productos correspondientes, calcular los valores recaudados y las cantidades vendidas, y ordenar la información para generar 
+los reportes solicitados. En el caso de la lectura y escritura de archivos, corregir posibles errores durante el procesamiento.
+Estas dificultades permitieron reforzar mis conocimientos y comprender la importancia de realizar pruebas para verificar el funcionamiento del programa.
